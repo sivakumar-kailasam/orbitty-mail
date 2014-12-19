@@ -1,0 +1,25 @@
+{{#each mail-thread in model}}
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			{{mail-thread.subject}}
+		</div>
+		<div class="panel-body">
+		{{mail-thread.mails.length}}
+			{{#each mail in mail-thread.mails}}
+				<div class="well">
+					<div class="row">sender: {{mail.sender}}</div>
+					<div class="row">senderPic: {{mail.senderPic}}</div>
+					<div class="row">receiver: {{mail.receiver}}</div>
+					<div class="row">receiverPic: {{mail.receiverPic}}</div>
+					<div class="row">subject: {{mail.subject}}</div>
+					<div class="row">message: {{mail.message}}</div>
+					<div class="row">date: {{mail.date}}</div>
+					<div class="row">isMailRead: {{mail.isMailRead}}</div>
+				</div>
+			{{/each}}
+
+		</div>
+	</div>
+
+{{/each}}

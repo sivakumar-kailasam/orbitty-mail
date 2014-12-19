@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'comments-thread',
+    modulePrefix: 'orbitty-mail',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
