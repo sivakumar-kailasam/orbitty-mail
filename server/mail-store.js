@@ -1,8 +1,7 @@
 module.exports = {
 	mails:  (function() {
 		var mails = [];
-
-		var MASHAPE_API_KEY = 'JdP0f4zzRZmsh0fcTfodoHti5jI1p1Ok8k1jsnGKQMc3btLwcz';
+		var MASHAPE_API_KEY = process.env.MASHAPE_API_KEY;
 		var faker = require('faker');
 		var unirest = require('unirest');
 
