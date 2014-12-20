@@ -7,5 +7,17 @@ export default Ember.Mixin.create({
 		}).then(function(mailThread) {
 			return mailThread.get('mails');
 		});
+	},
+	getMailByIdFromMailThreads: function getMailByIdFromMailThreads(mailId){
+		return this.store.find('mail-thread').then(function(mailThreads){
+			var filteredMailToReturn;
+			 mailThreads.forEach(function(mailThread){
+				var filteredMail = mailThread.get('mails').filterBy('id', +mailId)[0];
+				if( filteredMail ) {
+					filteredMailToReturn = filteredMail;
+				}
+			});
+			 return filteredMailToReturn;
+		});
 	}
 });

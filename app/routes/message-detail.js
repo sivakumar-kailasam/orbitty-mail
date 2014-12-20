@@ -9,7 +9,9 @@ export default Ember.Route.extend(mailExtractor,{
 	},
 	actions: {
 		markRead: function(mailId){
-                        console.info(mailId);
+                        		this.getMailByIdFromMailThreads(mailId).then(function(mail){
+                        			console.info(mail);
+                        		});
 		}
 	}
 });
