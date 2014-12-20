@@ -25,5 +25,5 @@ You will need an api key with [Mashape](https://www.mashape.com) for the fake da
 * [JSON schema](http://json-schema.org/)
 * [orbit.js](https://github.com/orbitjs/orbit.js)
 * [ember-orbit](https://github.com/orbitjs/ember-orbit) the drop in replacement of ember-data(not so mature though)
-* Original rfc on [HTTP PATCH](http://tools.ietf.org/html/rfc5789
+* Original rfc on [HTTP PATCH](http://tools.ietf.org/html/rfc5789)
 
