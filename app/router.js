@@ -6,6 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('message-detail', { path: '/:message_thread_id' }, function() { });
 });
 
 export default Router;

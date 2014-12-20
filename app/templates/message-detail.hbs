@@ -1,0 +1,31 @@
+<div class="row">
+	{{#link-to 'index'}}<span class="glyphicon glyphicon-circle-arrow-left"></span> Back to Mails{{/link-to}}	
+</div>
+
+{{#each mail in content}}
+	<div {{bind-attr class=":bs-callout mail.isMailRead:bs-callout-default:bs-callout-success"}}>
+
+			<div class="row">
+				<div class="col-lg-6">
+					<img  class="gravatar pull-left" {{bind-attr src=mail.senderPic}} />
+					<div class="sender pull-left">{{mail.sender}}</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="pull-right">
+						{{#unless mail.isMailRead}}
+							<button class="btn btn-warning" {{action 'markRead' mail.id}}>Mark mail as read</button>
+						{{/unless}}
+						{{ago mail.date}}
+					</div>
+				</div>
+			</div>
+			<div class="container row mail-message">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						{{mail.message}}
+					</div>
+				</div>
+			</div>
+
+	</div>
+{{/each}}

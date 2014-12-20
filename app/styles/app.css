@@ -1,3 +1,49 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 html, body {
   margin: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+.bs-callout {
+	padding: 20px;
+	margin: 20px 0;
+	border: 1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+	background: #eee;
+}
+
+.bs-callout.bs-callout-default{
+	border-left-color: #5bc0de;
+}
+
+.bs-callout.bs-callout-success {
+	background: #fff;
+	border-left-color: #5cb85c;
+}
+
+.bs-callout.bs-callout-warning {
+	background: #fff;
+	border-left-color: #f0ad4e;
+}
+
+.gravatar {
+	-webkit-box-shadow: 5px 0px 15px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 5px 0px 15px 0px rgba(0,0,0,0.25);
+	box-shadow: 5px 0px 15px 0px rgba(0,0,0,0.25);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+.sender{
+	font-size: 17px;
+	margin-left: 1%;
+}
+
+.sender-section {
+	border-bottom: 1px solid #000;
+}
+
+.mail-message {
+	margin-top: 3%;
 }

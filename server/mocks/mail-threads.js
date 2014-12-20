@@ -21,7 +21,7 @@ module.exports = function(app) {
             senderPic: faker.internet.avatar(),
             receiver: faker.name.firstName(),
             receiverPic: faker.internet.avatar(),
-            date: new Date(),
+            date: new Date(new Date() - (Math.floor(Math.random() * (1000000 - 10000 + 1)) +10000)),
             labels: ['inbox'],
             isMailRead: true,
             mailThread: 1

@@ -1,25 +1,13 @@
 {{#each mail-thread in model}}
 	
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			{{mail-thread.subject}}
-		</div>
-		<div class="panel-body">
-		{{mail-thread.mails.length}}
-			{{#each mail in mail-thread.mails}}
-				<div class="well">
-					<div class="row">sender: {{mail.sender}}</div>
-					<div class="row">senderPic: {{mail.senderPic}}</div>
-					<div class="row">receiver: {{mail.receiver}}</div>
-					<div class="row">receiverPic: {{mail.receiverPic}}</div>
-					<div class="row">subject: {{mail.subject}}</div>
-					<div class="row">message: {{mail.message}}</div>
-					<div class="row">date: {{mail.date}}</div>
-					<div class="row">isMailRead: {{mail.isMailRead}}</div>
-				</div>
-			{{/each}}
 
-		</div>
-	</div>
+
+  			<div {{bind-attr class=":bs-callout mail-thread.hasUnreadMails:bs-callout-success:bs-callout-default"}}>
+				{{#link-to 'message-detail' mail-thread.id }}
+					{{mail-thread.subject}} 
+				{{/link-to}}
+				({{mail-thread.mails.length}})
+			</div>
+
 
 {{/each}}
