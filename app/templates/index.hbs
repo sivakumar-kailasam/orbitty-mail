@@ -9,14 +9,14 @@
 	</div>
 </div>
 
-{{#each mail-thread in model}}
+{{#each mailThread in model}}
 	
-	<div {{bind-attr class=":bs-callout mail-thread.hasUnreadMails:bs-callout-success:bs-callout-default"}}>
-		{{#link-to 'message-detail' mail-thread.id }}
-			{{mail-thread.subject}} 
+	<div {{bind-attr class=":bs-callout mailThread.hasUnreadMails:bs-callout-success:bs-callout-default"}}>
+		{{#link-to 'message-detail' mailThread.id }}
+			{{mailThread.subject}} 
 		{{/link-to}}
 
-		({{mail-thread.mails.length}})
+		({{mailThread.mails.length}})
 	</div>
 
 {{/each}}

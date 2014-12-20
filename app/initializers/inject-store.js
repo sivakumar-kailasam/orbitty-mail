@@ -17,12 +17,8 @@ var JsonApiStore = EO.Store.extend({
 export function initialize(container, application) {
 	Orbit.Promise = Ember.RSVP.Promise;
 	Orbit.ajax  = Ember.$.ajax;
+	
 	application.register('schema:main', EO.Schema);
-
-	//// default InMemoryStore ////
-	// application.register('store:main', EO.Store);
-
-	//// LocalStorageStore ///
 	application.register('store:main', JsonApiStore);
 
 	application.inject('controller', 'store', 'store:main');
