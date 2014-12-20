@@ -1,14 +1,9 @@
 # orbitty-mail
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
-
+A small app to show how to send patch’ed updates to the server with [orbit.js](https://github.com/orbitjs/orbit.js)
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+You will need an api key with [Mashape](https://www.mashape.com) for the fake data we use in the app.
 
 ## Installation
 
@@ -16,35 +11,19 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 * `bower install`
+* `export MASHAPE_API_KEY='JdP0f4zzRZmsh0fcTfodoHti5jI1p1Ok8k1jsnGKQMc3btLwcz’`
 
 ## Running / Development
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* What’s a [JSON patch](http://jsonpatch.com/)
+* [JSON schema](http://json-schema.org/)
+* [orbit.js](https://github.com/orbitjs/orbit.js)
+* [ember-orbit](https://github.com/orbitjs/ember-orbit) the drop in replacement of ember-data(not so mature though)
+* Original rfc on [HTTP PATCH](http://tools.ietf.org/html/rfc5789
 
