@@ -2,7 +2,7 @@
 	{{#link-to 'index'}}<span class="glyphicon glyphicon-circle-arrow-left"></span> Back to Mails{{/link-to}}	
 </div>
 
-{{#each mail in content}}
+{{#each mail in mails}}
 	<div {{bind-attr class=":bs-callout mail.isMailRead:bs-callout-default:bs-callout-success"}}>
 
 			<div class="row">

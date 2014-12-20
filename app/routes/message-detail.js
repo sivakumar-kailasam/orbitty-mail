@@ -4,13 +4,17 @@ import mailExtractor from '../mixins/mail-extractor';
 export default Ember.Route.extend(mailExtractor,{
 	model: function (params) {
 		return this.getMailsFromMailThreadByThreadId(+params.message_thread_id).then(function(mails){
-			return mails.sortBy('date');
+			return {
+				mails: mails.sortBy('date'),
+				mailThreadId: +params.message_thread_id
+			};
 		});
 	},
 	actions: {
 		markRead: function(mailId){
-                        		this.getMailByIdFromMailThreads(mailId).then(function(mail){
-                        			console.info(mail);
+			var _this = this;
+                        		_this.getMailByIdFromMailThreads(mailId).then(function(mail){
+                        			mail.set('isMailRead', true);
                         		});
 		}
 	}
