@@ -8,7 +8,7 @@ export default Ember.Route.extend({
 		this.currentModel.forEach(function(mailThread){
 				mailThread.get('mails').forEach(function(mail){
 					mail.set('isMailRead', readStatus);
-				})
+				});
 			});
 	},
 	actions: {

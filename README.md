@@ -11,7 +11,7 @@ You will need an api key with [Mashape](https://www.mashape.com) for the fake da
 * change into the new directory
 * `npm install`
 * `bower install`
-* `export MASHAPE_API_KEY='JdP0f4zzRZmsh0fcTfodoHti5jI1p1Ok8k1jsnGKQMc3btLwcz’`
+* `export MASHAPE_API_KEY=JdP0f4zzRZmsh0fcTfodoHti5jI1p1Ok8k1jsnGKQMc3btLwcz`
 
 ## Running / Development
 
