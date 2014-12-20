@@ -7,8 +7,8 @@ You will need an api key with [Mashape](https://www.mashape.com) for the fake da
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
+* `git clone https://github.com/sivakumar-kailasam/orbitty-mail.git` this repository
+* `cd orbitty-mail`
 * `npm install`
 * `bower install`
 * `export MASHAPE_API_KEY=JdP0f4zzRZmsh0fcTfodoHti5jI1p1Ok8k1jsnGKQMc3btLwcz`
