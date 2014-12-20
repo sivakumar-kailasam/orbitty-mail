@@ -1,13 +1,22 @@
+<div class="row">
+	<div class="pull-right">
+		<button class="btn btn-success" {{action 'markAllRead'}}>
+			<span class="glyphicon glyphicon-folder-close"></span> 	Mark all as read
+		</button>
+		<button class="btn btn-warning" {{action 'markAllUnread'}}>
+			<span class="glyphicon glyphicon-folder-open"></span> 	Mark all as unread
+		</button>
+	</div>
+</div>
+
 {{#each mail-thread in model}}
 	
+	<div {{bind-attr class=":bs-callout mail-thread.hasUnreadMails:bs-callout-success:bs-callout-default"}}>
+		{{#link-to 'message-detail' mail-thread.id }}
+			{{mail-thread.subject}} 
+		{{/link-to}}
 
-
-  			<div {{bind-attr class=":bs-callout mail-thread.hasUnreadMails:bs-callout-success:bs-callout-default"}}>
-				{{#link-to 'message-detail' mail-thread.id }}
-					{{mail-thread.subject}} 
-				{{/link-to}}
-				({{mail-thread.mails.length}})
-			</div>
-
+		({{mail-thread.mails.length}})
+	</div>
 
 {{/each}}
